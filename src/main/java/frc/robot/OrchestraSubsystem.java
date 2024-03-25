@@ -21,7 +21,7 @@ import java.io.FileReader;
 import java.util.Iterator; 
 import java.util.Map; 
   
-public class OrchestraModule extends SubsystemBase {
+public class OrchestraSubsystem extends SubsystemBase {
 
   // Creates New motor
   private CANSparkMax instrument;
@@ -31,7 +31,7 @@ public class OrchestraModule extends SubsystemBase {
    * @param MotorID Motor ID (duh)
    * @param idleMode Either kbreak or kCoast, kCoast might sound cool idk try it
   */
-  public OrchestraModule(int MotorID, IdleMode idleMode) {
+  public OrchestraSubsystem(int MotorID, IdleMode idleMode) {
     instrument = new CANSparkMax(MotorID, MotorType.kBrushless);
     instrument.setIdleMode(idleMode);
   }

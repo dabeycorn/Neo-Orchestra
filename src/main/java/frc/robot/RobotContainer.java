@@ -11,17 +11,21 @@ public class RobotContainer {
 
   // * Initalize orchestra "instruments"
   //      * Bass motors (Both shooter motors)
-  private OrchestraModule leftBassMotor = new OrchestraModule(0, null);
-  private OrchestraModule rightBassMotor = new OrchestraModule(0, null);
+  private OrchestraSubsystem leftBassMotor = new OrchestraSubsystem(0, null);
+  private OrchestraSubsystem rightBassMotor = new OrchestraSubsystem(0, null);
   //      * Melody motors (Both roller motors)
-  private OrchestraModule ampMelodyMotor = new OrchestraModule(0, null);
-  private OrchestraModule intakeMelodyMotor = new OrchestraModule(0, null);
+  private OrchestraSubsystem ampMelodyMotor = new OrchestraSubsystem(0, null);
+  private OrchestraSubsystem intakeMelodyMotor = new OrchestraSubsystem(0, null);
 
   public RobotContainer() {
     configureBindings();
   }
 
   private void configureBindings() {}
+
+  private void readMusicFromJson() {
+    
+  }
 
   public Command getAutonomousCommand() {
     return Commands.print("No autonomous command configured");
